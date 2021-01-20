@@ -5,39 +5,39 @@
   <title>Bootstrap 4.0 Website</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
   <style>
  *{
   box-sizing: border-box;
  }
- html {
-  font-family: "Lucida Sans", sans-serif;
-}
- h1 {
-  text-decoration: bold;
-  color : white;
+ .container, .container-fluid {
+ width: 100%;
+ padding : 0px;
+ margin: 0px;
+ }
+ .col-lg-*, .col-md-* {
+ padding : 0px;
+ margin : 0px;
  }
  nav {
-  margin :25px;
+  text-decoration: bold;
  }
- .nav-button {
+ header, footer{
+  text-align: center;
+  padding : 75px 25px;
+  color : white;
+  background-size: cover;
+ }
+  .nav-button {
   background-color: blue;
   float : right;
   color : white;
   border-radius: 15%;
   opacity : 0.7;
  }
-
- header {
-  position : relative;
-  text-align: center;
-  padding : 75px 25px;
-  text-decoration: bold ;
-  color : white;
-  background-size: cover;
- }
- button {
+  button {
   background-color: blue;
   color : white;
   border-radius: 15%;
@@ -45,11 +45,19 @@
  }
  .row {
   width : 100%;
+  padding : 0px;
   margin : 0px;
-  padding: 50px;
   text-align: center;
-  color: darkblue;
+  justify-content: center;
  }
+  h4 {
+  text-align: center;
+  }
+  .form-inline {
+  display: flex;
+  justify-content: center;
+  }
+ 
  /* For mobile phones: */
 @media (max-width: 991px) {
   .col-md-1 {width: 8.33%;}
@@ -67,6 +75,11 @@
 }
 @media (min-width: 992px) {
   /* For desktop: */
+  .iconbox,.round-image {
+  display: flex;
+  justify-content: center;
+  padding : 50px;
+  }
   .col-lg-1 {width: 8.33%;}
   .col-lg-2 {width: 16.66%;}
   .col-lg-3 {width: 25%;}
@@ -93,77 +106,103 @@
   </div>
 </nav>
 
-<header class="jumbotron text-white text-center" style="background:url('/Users/annguyenngoc/CamNguyen/Coursera-devenv/Bootstrap 4.0/Image/Water1.jpg')no-repeat center center; ">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-lg-9"
-       <h1>Build a landing page for your business of project and generate more leads!</h1>
+<header class="jumbotron jumbotron-fluid" style="background:url('./Image/Water1.jpg')no-repeat center center; ">
+  <div class="container-fluid">
+  	<div class="row">
+      <div class="col-lg-7">
+       <h2>Build a landing page for your business of project and generate more leads!</h2>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="col-md-12 col-lg-7">
-         <form>
-         <input type="email" name="email" placeholder="Enter your email..."><br>
-         </form>
-      </div>
-      <div class="col-md-12">
+      <div class="col-lg-9">
+      <form class="form-inline">
+      <input type="email" name="email" placeholder="Enter your email...">
       <button type="button" onclick="alert('Hello World!')">Sign up!</button>
+      </form> 
       </div>
     </div>
   </div>  
-</header>
+ </header>
 
-  <div class="container-fluid">
+<section class="container">
     <div class="row">
-       <div class="col-lg-4 col-md-12">
-        <i class="fas fa-desktop" style="font-size: 50px;"></i>
-        <h4>Fully Responsive</h4>
-        <p>This theme will look great on any device no matter this size!</p>
-       </div>
-      <div class="col-lg-4 col-md-12">
-        <i class="fas fa-layer-group" style="font-size: 50px;"></i>
-        <h4>Bootstrap 4 Ready</h4>
-        <p>Featuring the latest build of the new Bootstrap 4 framework!</p>
-      </div>
-      <div class="col-lg-4 col-md-12">
-        <i class="fas fa-check-circle" style="font-size: 50px"></i>
-        <h4>Easy to Use</h4>
-        <p>Ready to use with your own content, or customize the source files!</p>
-      </div>
+    	<div class="iconbox">
+           <div class="col-lg-3 col-md-12">
+            <i class="fas fa-desktop" style="font-size: 40px; color: blue;"></i>
+            <h4>Fully Responsive</h4>
+            <p>This theme will look great on any device no matter this size!</p>
+           </div>
+           <div class="col-lg-3 col-md-12">
+            <i class="fas fa-layer-group" style="font-size: 40px; color: blue;"></i>
+            <h4>Bootstrap 4 Ready</h4>
+            <p>Featuring the latest build of the new Bootstrap 4 framework!</p>
+           </div>
+           <div class="col-lg-3 col-md-12">
+            <i class="fas fa-check-circle" style="font-size: 40px; color: blue;"></i>
+            <h4>Easy to Use</h4>
+            <p>Ready to use with your own content, or customize the source files!</p>
+           </div>
+        </div>
     </div>
-  </div>
+ </section>
 
-  <div class="container-fluid">
+<section class="container-fluid">
     <div class="row">
-      <div class="col-lg-6">
-      <img src="/Users/annguyenngoc/CamNguyen/Coursera-devenv/Bootstrap 4.0/Image/Iphone.jpg" alt="Fully Responsive Design" style="width:100%; height: auto";>
-      </div>
-      <div class="col-lg-6">
-      <h3>Fully Responsive Design</h3>
-      <p>When you use a theme created by Start Bootstrap, you know that the theme will look on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-      </div>
-      <div class="col-lg-6">
-      <img src="/Users/annguyenngoc/CamNguyen/Coursera-devenv/Bootstrap 4.0/Image/screen.jpg" alt="Updated for Bootstrap4" style="width:100%; height: auto";>
-      </div>
-      <div class="col-lg-6">
-      <h3>Updated for Bootstrap 4</h3>
-      <p>Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile reponsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
-      </div>
-      <div class="col-lg-6">
-      <img src="/Users/annguyenngoc/CamNguyen/Coursera-devenv/Bootstrap 4.0/Image/baby.jpg" alt="Easy to use" style="width:100%; height: auto";>
-      </div>
-      <div class="col-lg-6">
-      <h3>Ease to Use & Customize</h3>
-      <p>Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-      </div>
+        <div class="col-lg-6 ">
+            <img src="./Image/Iphone.jpg" alt="Fully Responsive Design" style="width:100%; height: 100%";>
+        </div>
+        <div class="col-lg-6">
+            <h5>Fully Responsive Design</h5>
+            <p>When you use a theme created by Start Bootstrap, you know that the theme will look on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="./Image/screen.jpg" alt="Updated for Bootstrap4" style="width:100%; height: 100%";>
+        </div>
+        <div class="col-lg-6">
+            <h5>Updated for Bootstrap 4</h5>
+            <p>Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile reponsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="./Image/baby.jpg" alt="Easy to use" style="width:100%; height: 100%";>
+        </div>
+        <div class="col-lg-6">
+            <h5>Ease to Use & Customize</h5>
+            <p>Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+        </div>
     </div>
-  </div>
+  </section>
 
 
-<footer style = "background-image: url('/Users/annguyenngoc/CamNguyen/Coursera-devenv/Bootstrap 4.0/Image/Water1.jpg');">
-  <h1>Ready to get started? Sign up now!</h1>
-  <input type="text" id="email" name="email" value="Enter your email..."><br>
+<section class="container">
+  <h4>What people are saying...</h4>
+	<div class="row">
+		<div class="round-image">
+		   <div class="col-lg-3 col-md-12">
+            <img src="./Image/Margaret.jpg" class="rounded-circle" alt="Margaret" style="width:30%; height: auto";>
+            <h6>Margaret E.</h6>
+            <p>"This is fantastic! Thanks so much guys!"</p>
+         </div>
+           <div class="col-lg-3 col-md-12">
+            <img src="./Image/Fred.jpg" class="rounded-circle" alt="Fred" style="width:30%; height: auto";>
+            <h6>Fred S.</h6>
+            <p>"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+         </div>
+           <div class="col-lg-3 col-md-12">
+            <img src="./Image/Sarah.jpg" class="rounded-circle" alt="Sarah" style="width:30%; height: auto";>
+            <h6>Sarah W.</h6>
+            <p>"Thanks so much for making these free resources available to us!"</p>
+           </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="jumbotron jumbotron-fluid" style="background:url('./Image/Water1.jpg')no-repeat center center;">
+  <h2>Ready to get started? Sign up now!</h2>
+  <form class="form-inline">
+  <input type="email" name="email" placeholder="Enter your email...">
   <button type="button" onclick="alert('Hello World!')">Sign up!</button>
+  </form>
   
 </footer>
 </body>
