@@ -73,13 +73,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: left;
   }
   li {
   float: left;
    }
-
- 
+  .icon-brand {
+  float : right;
+  }
  /* For mobile phones: */
 @media (max-width: 991px) {
   .col-md-1 {width: 8.33%;}
